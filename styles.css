@@ -279,6 +279,10 @@ ul, ol { list-style: none; }
     .about-image-wrapper { max-width: 280px; }
     .years-number { font-size: 4rem; }
     .years-text { font-size: 1rem; }
+    .services-grid { grid-template-columns: 1fr; gap: 16px; }
+    .service-card { padding: 24px 20px; }
+    .service-icon { font-size: 2.5rem; }
+    .service-title { font-size: 1.125rem; }
     .testimonial-card { padding: 32px 24px; margin: 0; }
     .testimonial-text { font-size: 1rem; }
 }

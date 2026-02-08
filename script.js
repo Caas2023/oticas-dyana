@@ -149,4 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
             prevSlide();
         }
     }
+    // WhatsApp Click Tracking
+    const whatsappButtons = document.querySelectorAll('a[href*="whatsapp"]');
+    whatsappButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            console.log('WhatsApp Clicked: ' + (btn.textContent.trim() || 'Icon'));
+        });
+    });
 });

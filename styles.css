@@ -228,11 +228,54 @@ ul, ol { list-style: none; }
 
 /* Responsive */
 @media (max-width: 600px) {
-    .hero-buttons { flex-direction: column; align-items: center; }
-    .hero-buttons .btn { width: 100%; max-width: 300px; }
-    .hero-stats { gap: 32px; }
-    .stat { flex: 1 1 40%; }
+    .hero { 
+        padding: 100px 0 60px; 
+        align-items: flex-end; /* Move content to bottom for better image visibility */
+        text-align: center;
+    }
+    .hero-bg {
+        background-position: 70% center; /* Focus on the face (assuming right side) */
+    }
+    /* Stronger gradient on mobile to ensure text readability over the image */
+    .hero-bg::before {
+        background: linear-gradient(to bottom, 
+            rgba(240,253,250,0.8) 0%, 
+            rgba(240,253,250,0.3) 40%, 
+            rgba(255,255,255,0.95) 90%);
+    }
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 24px;
+        color: var(--dark); /* Darker for contrast */
+        font-weight: 600;
+    }
+    .hero-buttons { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 12px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    .hero-buttons .btn { 
+        width: 100%; 
+        max-width: 100%; 
+        padding: 16px;
+    }
+    .hero-stats { 
+        display: none; /* Hide stats on mobile to declutter */
+    }
+    .hero-scroll {
+        display: none; /* Hide scroll indicator on mobile */
+    }
     .about-features { grid-template-columns: 1fr; }
-    .testimonial-card { padding: 32px 24px; }
-    .testimonial-text { font-size: 1.0625rem; }
+    .testimonial-card { padding: 32px 24px; margin: 0; }
+    .testimonial-text { font-size: 1rem; }
 }
